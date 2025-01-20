@@ -4,8 +4,7 @@
   --accent-color: #226ce0;
   --background-color: #FFE4E1;
   --card-background: #ffffff;
-  --orange-button: #f15a24;
-}
+  }
 
 * {
   margin: 0;
@@ -19,6 +18,7 @@ body {
   line-height: 1.6;
   color: var(--primary-color);
   max-width: 800px;
+  min-width: 650px;
   margin: 0 auto;
   padding: 2rem;
   background-color: var(--background-color);
@@ -73,20 +73,23 @@ h2 {
   margin-bottom: 1rem;
 }
 
+a {
+  color: var(--accent-color);
+}
+
 a:visited {
-  color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .amazon-link {
-  color: var(--accent-color);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.amazon-link:hover {
-  text-decoration: underline;
 }
 
 .newsletter-section {
@@ -126,19 +129,6 @@ a:visited {
   width: 32px;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
-
-  .book-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .book-cover {
-    margin-bottom: 1rem;
-  }
+.ml-form-embedWrapper.embedForm {
+  max-width: 100% !important;
 }
-
