@@ -22,35 +22,6 @@ body {
   padding: 2rem;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 48px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  .book-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-  
-  .book-cover {
-    width: 120px;
-    height: 180px;
-    margin: 0 auto;
-  }
-  
-  .book-info h3 {
-    font-size: 1.2rem;
-  }
-}
 
 body::before {
   content: '';
@@ -181,6 +152,7 @@ a:hover {
 /* Bottom Bar */
 .bottom-bar {
   position: fixed;
+  width: 320px;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -265,10 +237,40 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 28px !important;
+    margin-top: -8px !important;
+  }
+  
+  h2 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .book-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .book-cover {
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  
+  .book-info h3 {
+    font-size: 1.2rem;
+  }
+
   .bottom-bar {
-    left: 10px;
-    right: 10px;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
     border-radius: 20px;
     padding: 10px 16px;
   }
