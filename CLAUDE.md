@@ -10,6 +10,7 @@ This is a static author website for Marcel Lamothe, hosted on GitHub Pages.
 
 - **Local development**: `live-server` (requires `npm install -g live-server`)
 - **Deployment**: Automatic via GitHub Pages when pushing to main branch
+- **IMPORTANT**: After CSS changes, increment the version number in `css/style.css?v=X` in index.html to bust browser cache
 
 ## Environment
  
