@@ -18,9 +18,38 @@ body {
   line-height: 1.6;
   color: var(--primary-color);
   max-width: 800px;
-  min-width: 650px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .book-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .book-cover {
+    width: 120px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  
+  .book-info h3 {
+    font-size: 1.2rem;
+  }
 }
 
 body::before {
@@ -233,4 +262,36 @@ a:hover {
 
 .round-button.email-btn {
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .bottom-bar {
+    left: 10px;
+    right: 10px;
+    transform: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+  }
+  
+  .bottom-bar-content {
+    gap: 10px;
+  }
+  
+  .inline-newsletter {
+    min-width: auto;
+    flex: 1;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .round-button {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .button-icon {
+    width: 18px;
+    height: 18px;
+  }
 }
