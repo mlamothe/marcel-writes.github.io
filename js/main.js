@@ -17,6 +17,8 @@
   "https://assets.mailerlite.com/js/universal.js",
   "ml"
 );
+
+// Initialize MailerLite
 ml("account", "1285228");
 
 // Custom form handler
@@ -25,36 +27,37 @@ document.addEventListener('DOMContentLoaded', function() {
   const customSubmitBtn = document.getElementById('custom-submit');
   
   function submitToMailerLite(email) {
-    // Wait for MailerLite to be ready
-    if (typeof ml !== 'undefined') {
-      // Find the hidden MailerLite form
+    // Wait for MailerLite form to load and submit via the embedded form
+    const maxAttempts = 10;
+    let attempts = 0;
+    
+    function trySubmit() {
+      attempts++;
       const mlForm = document.querySelector('.ml-embedded[data-form="mdQuFX"]');
       
       if (mlForm) {
-        // Wait a bit for MailerLite form to initialize
-        setTimeout(() => {
-          // Try to find the email input in the MailerLite form
-          const mlEmailInput = mlForm.querySelector('input[type="email"]');
-          
-          if (mlEmailInput) {
-            // Set the email value and trigger submission
-            mlEmailInput.value = email;
-            
-            // Try to find and click the submit button
-            const mlSubmitBtn = mlForm.querySelector('button[type="submit"], input[type="submit"]');
-            if (mlSubmitBtn) {
-              mlSubmitBtn.click();
-            }
-          } else {
-            // Fallback: use MailerLite API directly
-            ml('subscribe', {
-              email: email,
-              form: 'mdQuFX'
-            });
-          }
-        }, 500);
+        // Look for the MailerLite form elements inside the embedded form
+        const mlEmailInput = mlForm.querySelector('input[type="email"], input[name="fields[email]"]');
+        const mlSubmitBtn = mlForm.querySelector('button, input[type="submit"]');
+        
+        if (mlEmailInput && mlSubmitBtn) {
+          mlEmailInput.value = email;
+          mlSubmitBtn.click();
+          console.log('Email submitted via MailerLite form:', email);
+          return true;
+        }
+      }
+      
+      if (attempts < maxAttempts) {
+        setTimeout(trySubmit, 500);
+        return false;
+      } else {
+        console.error('MailerLite form not found after', maxAttempts, 'attempts');
+        return false;
       }
     }
+    
+    return trySubmit();
   }
   
   // Handle custom form submission
@@ -80,15 +83,21 @@ document.addEventListener('DOMContentLoaded', function() {
     customSubmitBtn.textContent = '...';
     
     // Submit to MailerLite
-    submitToMailerLite(email);
+    const success = submitToMailerLite(email);
     
-    // Show success message
+    // Give feedback after attempting submission
     setTimeout(() => {
-      alert('Thank you for subscribing!');
-      customEmailInput.value = '';
+      if (success !== false) {
+        alert('Thank you for subscribing!');
+        customEmailInput.value = '';
+      } else {
+        alert('There was an error submitting your email. Please try again.');
+      }
+      
+      // Re-enable button
       customSubmitBtn.disabled = false;
       customSubmitBtn.textContent = '→';
-    }, 1000);
+    }, 2000);
   });
   
   // Handle Enter key in email input
