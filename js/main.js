@@ -26,6 +26,57 @@ document.addEventListener('DOMContentLoaded', function() {
   const customEmailInput = document.getElementById('custom-email');
   const customSubmitBtn = document.getElementById('custom-submit');
   
+  // Create notification function
+  function showNotification(type = 'success') {
+    // Remove any existing notifications
+    const existingNotification = document.querySelector('.notification');
+    const existingOverlay = document.querySelector('.notification-overlay');
+    if (existingNotification) existingNotification.remove();
+    if (existingOverlay) existingOverlay.remove();
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'notification-overlay';
+    
+    // Create notification
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    
+    const title = type === 'success' ? 'Welcome aboard! 🎉' : 'Oops! Something went wrong';
+    const content = type === 'success' ? 
+      "You're all set! I'll keep you posted on new books and writing adventures." :
+      "There was an issue subscribing your email. Please give it another try.";
+    
+    notification.innerHTML = `
+      <h3>${title}</h3>
+      <p>${content}</p>
+      <button class="notification-close">Got it!</button>
+    `;
+    
+    // Add to page
+    document.body.appendChild(overlay);
+    document.body.appendChild(notification);
+    
+    // Show with animation
+    setTimeout(() => {
+      overlay.classList.add('show');
+      notification.classList.add('show');
+    }, 10);
+    
+    // Close functionality
+    function closeNotification() {
+      notification.classList.remove('show');
+      overlay.classList.remove('show');
+      setTimeout(() => {
+        if (notification.parentNode) notification.remove();
+        if (overlay.parentNode) overlay.remove();
+      }, 300);
+    }
+    
+    notification.querySelector('.notification-close').addEventListener('click', closeNotification);
+    overlay.addEventListener('click', closeNotification);
+  }
+  
   function submitToMailerLite(email) {
     // Wait for MailerLite form to load and submit via the embedded form
     const maxAttempts = 10;
@@ -67,14 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = customEmailInput.value.trim();
     
     if (!email) {
-      alert('Please enter your email address');
+      showNotification('error');
       return;
     }
     
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert('Please enter a valid email address');
+      showNotification('error');
       return;
     }
     
@@ -88,10 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Give feedback after attempting submission
     setTimeout(() => {
       if (success !== false) {
-        alert('Thank you for subscribing!');
+        showNotification('success');
         customEmailInput.value = '';
       } else {
-        alert('There was an error submitting your email. Please try again.');
+        showNotification('error');
       }
       
       // Re-enable button
