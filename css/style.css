@@ -17,7 +17,7 @@ body {
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: var(--primary-color);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -97,7 +97,14 @@ h2 {
 
 .book-info h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.series-info {
+  font-size: 12px;
+  color: rgba(26, 26, 26, 0.7);
+  margin-bottom: 1rem !important;
+  font-style: italic;
 }
 
 .book-info p {
@@ -149,50 +156,66 @@ a:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Bottom Bar */
-.bottom-bar {
-  position: fixed;
-  width: 320px;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding: 12px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+/* Connect Section */
+.connect-section {
+  margin: 2rem 0;
 }
 
-.bottom-bar-content {
+.connect-card {
+  background: var(--card-background);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.connect-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-color);
+}
+
+.connect-card p {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.email-signup {
   display: flex;
   align-items: center;
-  gap: 15px;
+  max-width: 350px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  padding: 4px;
+  gap: 4px;
 }
 
-.inline-newsletter {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  padding: 8px 16px;
+.email-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
   font-size: 14px;
   color: var(--primary-color);
-  min-width: 200px;
-  text-align: center;
+  outline: none;
 }
 
-.social-buttons {
-  display: flex;
-  gap: 8px;
+.email-input::placeholder {
+  color: rgba(26, 26, 26, 0.6);
 }
 
-.round-button {
+.submit-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   border: none;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--primary-color);
+  background: var(--accent-color);
+  color: white;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -202,41 +225,15 @@ a:hover {
   justify-content: center;
 }
 
-.round-button:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+.submit-btn:hover {
+  background: #1a5bb8;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(34, 108, 224, 0.3);
 }
 
-.round-button.bluesky-btn:hover {
-  background: #0085ff;
-  color: white;
-}
 
-.round-button.bluesky-btn:hover .button-icon {
-  filter: brightness(0) invert(1);
-}
 
-.round-button.email-btn:hover {
-  background: #ff6b35;
-  color: white;
-}
-
-.button-icon {
-  width: 20px;
-  height: 20px;
-  transition: filter 0.2s ease;
-}
-
-.round-button.bluesky-btn {
-  text-decoration: none;
-}
-
-.round-button.email-btn {
-  font-size: 18px;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
     padding: 1rem;
   }
@@ -266,34 +263,23 @@ a:hover {
   .book-info h3 {
     font-size: 1.2rem;
   }
-
-  .bottom-bar {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    border-radius: 20px;
-    padding: 10px 16px;
+  
+  .connect-card {
+    padding: 1.5rem;
   }
   
-  .bottom-bar-content {
-    gap: 10px;
+  .connect-card h3 {
+    font-size: 1.3rem;
   }
   
-  .inline-newsletter {
-    min-width: auto;
-    flex: 1;
-    padding: 6px 12px;
-    font-size: 12px;
+  .email-signup {
+    max-width: 100%;
   }
   
-  .round-button {
+  .submit-btn {
     width: 36px;
     height: 36px;
     font-size: 14px;
   }
-  
-  .button-icon {
-    width: 18px;
-    height: 18px;
-  }
+
 }
