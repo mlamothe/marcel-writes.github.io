@@ -184,6 +184,13 @@ a:hover {
   font-size: 14px;
 }
 
+.privacy-disclaimer {
+  color: rgba(26, 26, 26, 0.6);
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-bottom: 0 !important;
+}
+
 .email-signup {
   display: flex;
   align-items: center;
