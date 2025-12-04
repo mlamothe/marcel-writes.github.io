@@ -34,6 +34,13 @@ h1 {
   color: var(--primary-color);
 }
 
+.tagline {
+  font-size: 0.875rem; /* 14px */
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
 .book-card {
   display: flex;
   gap: 1rem;
@@ -73,21 +80,25 @@ a:hover {
 
 .newsletter-section {
   text-align: center;
+  border-top: 4px solid var(--primary-color);
   margin: 2rem 0;
 }
 
 .copyright {
+  padding-top: 1rem;
   font-size: 0.75rem; /* 12px - smallest text */
 }
 
 .connect-section {
   margin: 2rem 0 3rem 0;
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  padding: 2rem 0;
 }
 
 .connect-card {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
+  max-width: 600px;  
 }
 
 .email-signup {
@@ -287,5 +298,4 @@ a:hover {
     height: 36px;
     font-size: 0.875rem; /* 14px - smaller for mobile */
   }
-
 }
