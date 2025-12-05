@@ -230,3 +230,14 @@ footer {
 .notification.error .notification-close:hover {
   background: #dc2626;
 }
+
+/* Mobile responsive: stack book cover above text on small screens */
+@media (max-width: 600px) {
+  .book-card {
+    flex-direction: column;
+  }
+
+  .book-cover {
+    align-self: center;
+  }
+}
