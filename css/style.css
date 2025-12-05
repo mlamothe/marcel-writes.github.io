@@ -17,7 +17,7 @@ body {
   color: var(--primary-color);
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 p {
@@ -79,22 +79,28 @@ a:hover {
   display: inline-flex;
   gap: 0.5rem;
   font-weight: 900;
-  font-size: 1rem;
+}
+
+/* Section system: consistent padding and borders */
+.section {
+  padding: 1.5rem 0;
+}
+
+.section:first-of-type {
+  border-top: 4px solid var(--primary-color);
+  margin-top: 1.5rem;
+}
+
+.section + .section {
+  border-top: 4px solid var(--primary-color);
 }
 
 footer {
   text-align: center;
   border-top: 4px solid var(--primary-color);
-  margin: 2rem 0;
-  padding-top: 1rem;
+  padding: 1rem 0 0 0;
+  margin: 0;
   font-size: 0.75rem; /* 12px - smallest text */
-}
-
-.connect-section {
-  margin: 2rem 0 2rem 0;
-  border-top: 4px solid var(--primary-color);
-  border-bottom: 4px solid var(--primary-color);
-  padding: 2rem 0;
 }
 
 .no-spam {
