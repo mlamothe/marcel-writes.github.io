@@ -83,13 +83,10 @@ a:hover {
   font-size: 1rem;
 }
 
-.newsletter-section {
+footer {
   text-align: center;
   border-top: 4px solid var(--primary-color);
   margin: 2rem 0;
-}
-
-.copyright {
   padding-top: 1rem;
   font-size: 0.75rem; /* 12px - smallest text */
 }
