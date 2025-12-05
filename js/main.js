@@ -157,4 +157,12 @@ document.addEventListener('DOMContentLoaded', function() {
       customSubmitBtn.click();
     }
   });
+
+  // Handle Bluesky link click
+  const blueskyLink = document.getElementById('bluesky-link');
+  if (blueskyLink) {
+    blueskyLink.addEventListener('click', function(e) {
+      window.location.href = 'https://bsky.app/profile/marcel-writes.com';
+    });
+  }
 });

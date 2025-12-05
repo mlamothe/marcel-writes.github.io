@@ -237,6 +237,30 @@ footer {
   background: #dc2626;
 }
 
+.bluesky-follow {
+  margin-top: 1.5rem;
+  font-size: 0.875rem; /* 14px */
+  cursor: pointer;
+}
+
+.bluesky-follow p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.bluesky-logo {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-color);
+  transition: transform 0.2s ease;
+}
+
+.bluesky-logo:hover {
+  transform: scale(1.1);
+}
+
 /* Mobile responsive: stack book cover above text on small screens */
 @media (max-width: 600px) {
   .book-card {
