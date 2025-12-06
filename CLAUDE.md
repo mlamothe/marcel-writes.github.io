@@ -32,4 +32,15 @@ The site is a simple static HTML/CSS/JS website with the following structure:
 
 - Responsive book cards layout showcasing published and upcoming books
 
+## Permissions
+
+Claude Code has permission to edit the following files without requiring explicit approval:
+- `index.html`
+- `css/style.css`
+- `js/main.js`
+- Any files in the `assets/` directory
+- This `CLAUDE.md` file itself
+
+When making changes to CSS, remember to increment the version number in the CSS link in index.html.
+
 
