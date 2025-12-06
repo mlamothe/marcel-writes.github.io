@@ -56,6 +56,11 @@ header {
   /* font-weight: 400; */
 }
 
+.connect-card {
+  /* text-align: center; */
+  /* max-width: 600px;   */
+}
+
 /*
 p {
   
@@ -131,21 +136,17 @@ footer {
   font-size: 0.65rem;
 }
 
-.connect-card {
-  text-align: center;
-  max-width: 600px;  
-}
-
 .email-signup {
   display: flex;
-  align-items: center;
-  max-width: 350px;
-  margin: 0 auto;
+  /* align-items: center; */
+  /* max-width: 350px; */
+  /* margin: 0 auto; */
   background: rgba(0, 0, 0, 0.05);
-  border-radius: 25px;
+  border-radius: 8px;
   padding: 4px;
   gap: 4px;
   margin-top: 10px;
+  height: 60px;
 }
 
 .email-input {
