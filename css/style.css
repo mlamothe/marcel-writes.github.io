@@ -13,11 +13,9 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  /* line-height: 28px; */
   color: var(--primary-color);
   margin: 0 auto;
   background-color: #FFDA85;
-  /* padding: 1rem 2rem 2rem 2rem; */
 }
 
 header {
@@ -27,16 +25,13 @@ header {
   flex-direction: column;
   position: relative;
   padding-top: 16px;
-  /* padding: 24px 16px; */
-  /* color: rgb(171, 171, 171); */
 }
 
 .beach {
   width: 390px;
   height: 390px;
-  margin: -40px auto 0;
+  margin: -20px auto 0;
   display: block;
-  border: 1px solid #ccc;
 }
 
 .name {
@@ -50,132 +45,81 @@ header {
   margin: -4px 0 0 2px;
   position: relative;
   z-index: 10;
-  /* font-size: 0.875rem; */
-  /* color: var(--primary-color); */
-  /* margin-top: 0.5rem; */
-  /* font-weight: 400; */
-}
-
-.connect-card {
-  /* text-align: center; */
-  /* max-width: 600px;   */
-}
-
-/*
-p {
-  
-}
-
-h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 2.1875rem;
-  margin: 0;
-  color: var(--primary-color);
-}
-
-.book-card {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.book-cover {
-  height: 320px;
-}
-
-.book-info h3 {
-  margin-bottom: 0.3rem;
-}
-
-.and {
-  color: var(--accent-color);  
-  font-style: italic;  
-}
-
-.book-info p {
-  margin-bottom: 1rem;
-}
-
-a {
-  color: var(--primary-color);
-}
-
-a:hover {
-  color: var(--accent-color);
-}
-
-.store-link {
-  display: inline-flex;
-  gap: 0.5rem;
-  font-weight: 900;
-}
-
-.section {
-  padding: 1.5rem 0;
-}
-*/
-.section:first-of-type {
-  /* border-top: 4px solid var(--primary-color); */
-  margin-top: 1.5rem;
-}
-
-.section + .section {
-  /* border-top: 4px solid var(--primary-color); */
 }
 
 footer {
   text-align: center;
-  /* border-top: 4px solid var(--primary-color); */
   padding: 1rem 0 0 0;
   margin: 0;
   font-size: 0.75rem; /* 12px - smallest text */
 }
 
-.no-spam {
-  font-size: 0.65rem;
+.connect-card {
+  background-color: #1E1E1E;
+  padding: 32px 0 40px 0;
+  color: rgb(171, 171, 171);
+  /* text-align: center; */
+  /* max-width: 600px;   */
 }
 
 .email-signup {
   display: flex;
-  /* align-items: center; */
-  /* max-width: 350px; */
-  /* margin: 0 auto; */
-  background: rgba(0, 0, 0, 0.05);
+  flex-direction: row;
+  align-items: center;
+  background-color: #ABABAB;
   border-radius: 8px;
-  padding: 4px;
-  gap: 4px;
-  margin-top: 10px;
   height: 60px;
+  padding-right: 10px;  
 }
 
 .email-input {
   flex: 1;
   border: none;
   background: transparent;
-  padding: 12px 20px;
-  font-size: 0.875rem; /* 14px - same as body */
-  color: var(--primary-color);
+  padding-left: 16px;
+  height: 54px;
+  font-size: 16px;
+
   outline: none;
 }
 
 .email-input::placeholder {
-  color: rgba(26, 26, 26, 0.6);
+  color: #6F6F6F;
 }
 
+.join-us {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.no-spam {
+  font-size: 16px;
+  padding: 10px 0 10px 0;
+  /* font-weight: 700; */
+}
+
+
 .submit-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  align-self: center;
+  /* margin-top: 10px; */
+  padding: 0 10px 0 10px;
+  /* width: 40px; */
+  /* height: 40px; */
+  /* border-radius: 50%; */
+  font-family: "Nunito", sans-serif;
   border: none;
-  background: var(--accent-color);
-  color: white;
-  font-size: 1rem; /* 16px */
-  font-weight: bold;
+  border-radius: 8px;
+  background: #333333;
+  color: rgb(215, 215, 215);
+  height: 40px;
+  font-size: 16px;
+  /* font-size: 1rem; 16px */
+  font-weight: 500;
+  line-height: 16px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 /* Custom Notification Styles */
@@ -295,5 +239,56 @@ footer {
   .book-cover {
     align-self: center;
   }
+}
+*/
+
+/*
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.1875rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.book-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.book-cover {
+  height: 320px;
+}
+
+.book-info h3 {
+  margin-bottom: 0.3rem;
+}
+
+.and {
+  color: var(--accent-color);  
+  font-style: italic;  
+}
+
+.book-info p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.store-link {
+  display: inline-flex;
+  gap: 0.5rem;
+  font-weight: 900;
+}
+
+.section {
+  padding: 1.5rem 0;
 }
 */
