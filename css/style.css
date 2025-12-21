@@ -56,7 +56,7 @@ footer {
 
 .connect-card {
   background-color: #1E1E1E;
-  padding: 32px 0 40px 0;
+  /* padding: 32px 0 40px 0; */
   color: rgb(171, 171, 171);
   /* text-align: center; */
   /* max-width: 600px;   */
@@ -222,7 +222,7 @@ footer {
 .bluesky-logo {
   width: 18px;
   height: 18px;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   transition: transform 0.2s ease;
 }
 
