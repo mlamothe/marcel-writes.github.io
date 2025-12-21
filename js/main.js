@@ -25,6 +25,7 @@ ml("account", "1285228");
 document.addEventListener('DOMContentLoaded', function() {
   const customEmailInput = document.getElementById('custom-email');
   const customSubmitBtn = document.getElementById('custom-submit');
+  const originalBtnContent = customSubmitBtn.innerHTML;
   
   // Create notification function
   function showNotification(type = 'success') {
@@ -147,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Re-enable button
       customSubmitBtn.disabled = false;
-      customSubmitBtn.textContent = '→';
+      customSubmitBtn.innerHTML = originalBtnContent;
     }, 2000);
   });
   
