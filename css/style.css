@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&family=Josefin+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+
 :root {
-  --primary-color: #000000;
+  --primary-color: #333333;
   --accent-color: #007acc;
   font-size: 16px; /* Base font size: 1rem = 16px */
-  }
+}
 
 * {
   margin: 0;
@@ -11,11 +13,12 @@
 }
 
 body {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 0.8125rem; /* 13px */
+  font-family: Verdana, system-ui, Helvetica, sans-serif;
+  font-size: 13px;
   line-height: 1.6;
   color: var(--primary-color);
-  max-width: 600px;
+  background-color: #FFFFFF;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem 2rem 2rem 2rem;
 }
@@ -28,34 +31,79 @@ header {
   text-align: center;
 }
 
-
 h1 {
-  font-size: 1.75rem; /* 28px */
-  font-weight: 700;
-  line-height: 2.1875rem; /* 35px */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   margin: 0;
   color: var(--primary-color);
 }
 
 .tagline {
-  font-size: 0.875rem; /* 14px */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
   color: var(--primary-color);
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
+  /* opacity: 0.8; */
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.75rem;
+}
+
+.nav-link {
+  font-size: 0.875rem; /* 14px */
   font-weight: 400;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--accent-color);
 }
 
 .book-card {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: flex-start;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
 }
 
 .book-cover {
-  height: 320px;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 
 .book-info h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 0.3rem;
+}
+
+.book-title-link {
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.book-title-link:hover {
+  background-color: #f0f0f0;
 }
 
 .and {
@@ -77,27 +125,20 @@ a:hover {
 
 .store-link {
   display: inline-flex;
-  gap: 0.5rem;
-  font-weight: 900;
+  gap: 0.5rem;  
 }
 
-/* Section system: consistent padding and borders */
+/* Section system: consistent padding */
 .section {
-  padding: 1.5rem 0;
+  padding: 0.75rem 0;
 }
 
 .section:first-of-type {
-  border-top: 4px solid var(--primary-color);
   margin-top: 1.5rem;
-}
-
-.section + .section {
-  border-top: 4px solid var(--primary-color);
 }
 
 footer {
   text-align: center;
-  border-top: 4px solid var(--primary-color);
   padding: 1rem 0 0 0;
   margin: 0;
   font-size: 0.75rem; /* 12px - smallest text */
@@ -109,7 +150,10 @@ footer {
 
 .connect-card {
   text-align: center;
-  max-width: 600px;  
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
 }
 
 .email-signup {
@@ -135,7 +179,7 @@ footer {
 }
 
 .email-input::placeholder {
-  color: rgba(26, 26, 26, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .submit-btn {
@@ -238,21 +282,14 @@ footer {
 }
 
 .bluesky-follow {
-  margin-top: 1.5rem;
-  font-size: 0.875rem; /* 14px */
+  margin-top: 1.5rem;  
   cursor: pointer;
-}
-
-.bluesky-follow p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  text-align: center;
 }
 
 .bluesky-logo {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
   color: var(--accent-color);
   transition: transform 0.2s ease;
 }
