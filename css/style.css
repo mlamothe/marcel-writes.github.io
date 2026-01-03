@@ -56,6 +56,13 @@ h1 {
   background-color: #F5F5F5;
   border-radius: 8px;
   padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.book-card:hover {
+  background-color: #E8E8E8;
 }
 
 .book-cover {
