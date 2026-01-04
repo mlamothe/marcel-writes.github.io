@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Handle book card clicks
-  const bookCards = document.querySelectorAll('.book-card');
+  const bookCards = document.querySelectorAll('.book-card:not(.disabled)');
   bookCards.forEach(card => {
     card.addEventListener('click', function(e) {
       const link = card.querySelector('.book-title-link');
