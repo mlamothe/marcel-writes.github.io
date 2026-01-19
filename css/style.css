@@ -14,11 +14,11 @@
 
 body {
   font-family: Verdana, system-ui, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.6;
   color: var(--primary-color);
   background-color: #FFFFFF;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 2rem 2rem 2rem;
 }
@@ -43,7 +43,7 @@ h1 {
 
 .tagline {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   font-style: italic;
   color: var(--primary-color);
@@ -66,14 +66,20 @@ h1 {
 }
 
 .book-cover {
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   height: auto;
 }
 
+@media (min-width: 601px) {
+  .book-cover {
+    max-width: 600px;
+  }
+}
+
 .book-info h3 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   margin-bottom: 0.3rem;
 }
@@ -104,7 +110,7 @@ footer {
   text-align: center;
   padding: 1rem 0 0 0;
   margin: 0;
-  font-size: 0.75rem; /* 12px - smallest text */
+  font-size: 0.875rem; /* 15px - smallest text */
 }
 
 .connect-card {
@@ -132,7 +138,7 @@ footer {
   border: none;
   background: transparent;
   padding: 12px 20px;
-  font-size: 0.875rem; /* 14px - same as body */
+  font-size: 1rem; /* 17px - same as body */
   color: var(--primary-color);
   outline: none;
 }
