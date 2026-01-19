@@ -89,6 +89,23 @@ h1 {
   color: inherit;
 }
 
+.external-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+.series-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.8rem !important;
+}
+
 .book-info p {
   margin-bottom: 1rem;
 }
