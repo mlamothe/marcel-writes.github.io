@@ -159,16 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Handle book card clicks
-  const bookCards = document.querySelectorAll('.book-card:not(.disabled)');
-  bookCards.forEach(card => {
-    card.addEventListener('click', function(e) {
-      const link = card.querySelector('.book-title-link');
-      if (link) {
-        window.open(link.href, link.target);
-      }
-    });
-  });
 
   // Handle Bluesky link click
   const blueskyLink = document.getElementById('bluesky-link');
