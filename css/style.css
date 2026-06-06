@@ -33,7 +33,16 @@ p {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   text-align: center;
+  margin: -1rem -2rem 0;
+  padding: 1rem 2rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
 }
 
 h1 {
@@ -69,6 +78,21 @@ h1 {
   gap: 1rem;
   max-width: 900px;
   margin: 0 auto;
+}
+
+.book-navigation-section h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-navigation-section {
+  margin: 0.75rem 0;
+  padding: 1.5rem 2rem;
+  background-color: #F5F5F5;
+  border-radius: 8px;
 }
 
 .book-thumbnail {
@@ -127,6 +151,24 @@ h1 {
   color: inherit;
 }
 
+.amazon-button {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.amazon-button:hover,
+.amazon-button:focus-visible {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
 .external-icon {
   width: 18px;
   height: 18px;
@@ -160,6 +202,7 @@ a {
 /* Section system: consistent padding */
 .section {
   padding: 0.75rem 0;
+  scroll-margin-top: 5rem;
 }
 
 .section:first-of-type {
@@ -307,9 +350,14 @@ footer {
 }
 
 .bluesky-follow {
-  margin-top: 1.5rem;  
-  cursor: pointer;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .bluesky-logo {
@@ -319,7 +367,8 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.bluesky-logo:hover {
+.bluesky-follow:hover .bluesky-logo,
+.bluesky-follow:focus-visible .bluesky-logo {
   transform: scale(1.1);
 }
 
