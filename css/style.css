@@ -169,15 +169,6 @@ h1 {
   transform: translateY(-2px);
 }
 
-.external-icon {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 4px;
-  opacity: 0.6;
-}
-
 .translations {
   font-size: 0.875rem;
   color: #666;
