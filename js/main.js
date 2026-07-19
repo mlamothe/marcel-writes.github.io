@@ -21,141 +21,44 @@
 // Initialize MailerLite
 ml("account", "1285228");
 
-// Custom form handler
-document.addEventListener('DOMContentLoaded', function() {
-  const customEmailInput = document.getElementById('custom-email');
-  const customSubmitBtn = document.getElementById('custom-submit');
-  const originalBtnContent = customSubmitBtn.innerHTML;
-  
-  // Create notification function
-  function showNotification(type = 'success') {
-    // Remove any existing notifications
-    const existingNotification = document.querySelector('.notification');
-    const existingOverlay = document.querySelector('.notification-overlay');
-    if (existingNotification) existingNotification.remove();
-    if (existingOverlay) existingOverlay.remove();
-    
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'notification-overlay';
-    
-    // Create notification
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    
-    const title = type === 'success' ? 'Welcome aboard! 🎉' : 'Oops! Something went wrong';
-    const content = type === 'success' ? 
-      "You're all set! I'll keep you posted on new books and writing adventures." :
-      "There was an issue subscribing your email. Please give it another try.";
-    
-    notification.innerHTML = `
-      <h3>${title}</h3>
-      <p>${content}</p>
-      <button class="notification-close">Got it!</button>
-    `;
-    
-    // Add to page
-    document.body.appendChild(overlay);
-    document.body.appendChild(notification);
-    
-    // Show with animation
-    setTimeout(() => {
-      overlay.classList.add('show');
-      notification.classList.add('show');
-    }, 10);
-    
-    // Close functionality
-    function closeNotification() {
-      notification.classList.remove('show');
-      overlay.classList.remove('show');
-      setTimeout(() => {
-        if (notification.parentNode) notification.remove();
-        if (overlay.parentNode) overlay.remove();
-      }, 300);
+// MailerLite renders the form asynchronously. This only applies the site's
+// accessible labels and icon; MailerLite owns submission and response handling.
+document.addEventListener("DOMContentLoaded", function () {
+  const embed = document.querySelector('.ml-embedded[data-form="mdQuFX"]');
+  const envelopeIcon = `
+    <svg width="18" height="14" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 4L10 12L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M2 4H22V16C22 17.1046 21.1046 18 20 18H4C2.89543 18 2 17.1046 2 16V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  `;
+
+  function enhanceMailerLiteForm() {
+    const emailInput = embed.querySelector('input[name="fields[email]"]');
+    const submitButtons = embed.querySelectorAll('button[type="submit"]');
+
+    if (!emailInput || submitButtons.length === 0) {
+      return false;
     }
-    
-    notification.querySelector('.notification-close').addEventListener('click', closeNotification);
-    overlay.addEventListener('click', closeNotification);
+
+    emailInput.id = "mailing-list-email";
+    emailInput.placeholder = "Your email address";
+    emailInput.autocomplete = "email";
+
+    submitButtons.forEach(function (button) {
+      button.setAttribute("aria-label", "Join the mailing list");
+      button.innerHTML = envelopeIcon;
+    });
+
+    return true;
   }
-  
-  function submitToMailerLite(email) {
-    // Wait for MailerLite form to load and submit via the embedded form
-    const maxAttempts = 10;
-    let attempts = 0;
-    
-    function trySubmit() {
-      attempts++;
-      const mlForm = document.querySelector('.ml-embedded[data-form="mdQuFX"]');
-      
-      if (mlForm) {
-        // Look for the MailerLite form elements inside the embedded form
-        const mlEmailInput = mlForm.querySelector('input[type="email"], input[name="fields[email]"]');
-        const mlSubmitBtn = mlForm.querySelector('button, input[type="submit"]');
-        
-        if (mlEmailInput && mlSubmitBtn) {
-          mlEmailInput.value = email;
-          mlSubmitBtn.click();
-          console.log('Email submitted via MailerLite form:', email);
-          return true;
-        }
+
+  if (!enhanceMailerLiteForm()) {
+    const observer = new MutationObserver(function () {
+      if (enhanceMailerLiteForm()) {
+        observer.disconnect();
       }
-      
-      if (attempts < maxAttempts) {
-        setTimeout(trySubmit, 500);
-        return false;
-      } else {
-        console.error('MailerLite form not found after', maxAttempts, 'attempts');
-        return false;
-      }
-    }
-    
-    return trySubmit();
+    });
+
+    observer.observe(embed, { childList: true, subtree: true });
   }
-  
-  // Handle custom form submission
-  customSubmitBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const email = customEmailInput.value.trim();
-    
-    if (!email) {
-      showNotification('error');
-      return;
-    }
-    
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      showNotification('error');
-      return;
-    }
-    
-    // Disable button to prevent double submission
-    customSubmitBtn.disabled = true;
-    customSubmitBtn.textContent = '...';
-    
-    // Submit to MailerLite
-    const success = submitToMailerLite(email);
-    
-    // Give feedback after attempting submission
-    setTimeout(() => {
-      if (success !== false) {
-        showNotification('success');
-        customEmailInput.value = '';
-      } else {
-        showNotification('error');
-      }
-      
-      // Re-enable button
-      customSubmitBtn.disabled = false;
-      customSubmitBtn.innerHTML = originalBtnContent;
-    }, 2000);
-  });
-  
-  // Handle Enter key in email input
-  customEmailInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      customSubmitBtn.click();
-    }
-  });
 });

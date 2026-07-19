@@ -215,129 +215,139 @@ footer {
   padding: 1.5rem 2rem;
 }
 
-.email-signup {
-  display: flex;
-  align-items: center;
+.connect-card .ml-embedded {
   max-width: 350px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 25px;
-  padding: 4px;
-  gap: 4px;
-  margin-top: 10px;
+  margin: 10px auto 0;
 }
 
-.email-input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 12px 20px;
-  font-size: 1rem; /* 17px - same as body */
-  color: var(--primary-color);
-  outline: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.email-input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+/* Keep MailerLite's official submission handling while matching the site. */
+#mlb2-21775010.ml-form-embedContainer,
+#mlb2-21775010.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+  display: block !important;
+  max-width: 350px !important;
+  width: 100% !important;
+  background: transparent !important;
 }
 
-.submit-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: var(--accent-color);
-  color: white;
-  font-size: 1rem; /* 16px */
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#mlb2-21775010.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
+  padding: 0 !important;
 }
 
-/* Custom Notification Styles */
-.notification {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: all 0.3s ease;
+#mlb2-21775010.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+  float: none !important;
+  padding: 0 !important;
 }
 
-.notification.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+#mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow {
+  display: flex !important;
+  float: none !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 4px !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 25px !important;
 }
 
-.notification-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+#mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow .ml-input-horizontal {
+  flex: 1 1 auto !important;
+  float: none !important;
+  min-width: 0 !important;
+  width: auto !important;
 }
 
-.notification-overlay.show {
-  opacity: 1;
+#mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow .horizontal-fields {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
-.notification h3 {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-  font-size: 1.25rem; /* 20px - same as book h3 */
+#mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow input.form-control {
+  min-width: 0 !important;
+  padding: 9.5px 16px !important;
+  border: 0 !important;
+  border-radius: 21px !important;
+  outline: none !important;
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  font-family: Verdana, system-ui, Helvetica, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 21px !important;
 }
 
-.notification p {
-  color: var(--primary-color);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+#mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow input.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.4) !important;
+  opacity: 1 !important;
 }
 
-.notification-close {
-  background: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem; /* 16px */
-  font-weight: 600;
-  transition: all 0.2s ease;
+#mlb2-21775010.ml-form-embedContainer .ml-form-formContent.horozintalForm .ml-button-horizontal {
+  display: block !important;
+  flex: 0 0 40px !important;
+  float: none !important;
+  width: 40px !important;
 }
 
-.notification-close:hover {
-  background: #1a5bb8;
-  transform: translateY(-1px);
+.connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-button-horizontal button.primary,
+.connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-mobileButton-horizontal button.primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  min-width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: var(--accent-color) !important;
+  color: #FFFFFF !important;
+  cursor: pointer !important;
 }
 
-.notification.success h3 {
-  color: #10b981;
+.connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-button-horizontal button.primary:hover,
+.connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-button-horizontal button.primary:focus-visible {
+  background: #005fa3 !important;
 }
 
-.notification.error h3 {
-  color: #ef4444;
+#mlb2-21775010.ml-form-embedContainer .ml-mobileButton-horizontal {
+  display: none !important;
 }
 
-.notification.error .notification-close {
-  background: #ef4444;
+#mlb2-21775010.ml-form-embedContainer .ml-form-successBody {
+  padding: 0 !important;
+  text-align: center !important;
 }
 
-.notification.error .notification-close:hover {
-  background: #dc2626;
+#mlb2-21775010.ml-form-embedContainer .ml-form-successBody .ml-form-successContent {
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+#mlb2-21775010.ml-form-embedContainer .ml-form-successBody .ml-form-successContent h4 {
+  margin: 0 0 0.25rem !important;
+  color: #10b981 !important;
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 1.25rem !important;
+  text-align: center !important;
+}
+
+#mlb2-21775010.ml-form-embedContainer .ml-form-successBody .ml-form-successContent p {
+  margin: 0 !important;
+  color: var(--primary-color) !important;
+  font-family: Verdana, system-ui, Helvetica, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
 }
 
 .bluesky-follow {
