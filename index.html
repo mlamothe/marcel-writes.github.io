@@ -17,8 +17,84 @@
   <meta name="twitter:title" content="Marcel Lamothe" />
   <meta name="twitter:description" content="Stories about freedom, self-discovery, and unconventional communities." />
   <meta name="twitter:image" content="https://marcel-writes.com/assets/images/the-naked-truth.jpg" />
-  <link rel="stylesheet" href="css/style.css?v=12" />
-  <script src="js/main.js?v=2"></script>
+  <link rel="icon" type="image/jpeg" href="assets/images/the-naked-truth.jpg" />
+  <link rel="apple-touch-icon" href="assets/images/the-naked-truth.jpg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://marcel-writes.com/#author",
+          "name": "Marcel Lamothe",
+          "url": "https://marcel-writes.com/",
+          "sameAs": ["https://bsky.app/profile/marcel-writes.com"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://marcel-writes.com/#website",
+          "url": "https://marcel-writes.com/",
+          "name": "Marcel Lamothe",
+          "description": "Warm, witty stories about freedom, self-discovery, and unconventional communities.",
+          "author": { "@id": "https://marcel-writes.com/#author" }
+        },
+        {
+          "@type": "Book",
+          "@id": "https://marcel-writes.com/#the-naked-truth-book",
+          "name": "The Naked Truth",
+          "url": "https://marcel-writes.com/#the-naked-truth",
+          "image": "https://marcel-writes.com/assets/images/the-naked-truth.jpg",
+          "author": { "@id": "https://marcel-writes.com/#author" },
+          "inLanguage": "en",
+          "genre": ["Fiction", "Naturist fiction"],
+          "position": 1,
+          "isPartOf": { "@type": "BookSeries", "name": "Jane Cullen" },
+          "sameAs": "https://www.amazon.com/dp/B0DPDY1RDD"
+        },
+        {
+          "@type": "Book",
+          "@id": "https://marcel-writes.com/#the-oceans-daughter-book",
+          "name": "The Ocean's Daughter",
+          "url": "https://marcel-writes.com/#the-oceans-daughter",
+          "image": "https://marcel-writes.com/assets/images/the_oceans_daughter_cover.jpg",
+          "author": { "@id": "https://marcel-writes.com/#author" },
+          "inLanguage": "en",
+          "genre": ["Fiction", "Naturist fiction"],
+          "position": 2,
+          "isPartOf": { "@type": "BookSeries", "name": "Jane Cullen" },
+          "sameAs": "https://www.amazon.com/dp/B0FDGMB95W"
+        },
+        {
+          "@type": "Book",
+          "@id": "https://marcel-writes.com/#big-bare-island-book",
+          "name": "Big Bare Island",
+          "url": "https://marcel-writes.com/#big-bare-island",
+          "image": "https://marcel-writes.com/assets/images/Big-Bare-Island-eBook-Cover.jpg",
+          "author": { "@id": "https://marcel-writes.com/#author" },
+          "inLanguage": "en",
+          "genre": ["Fiction", "Naturist fiction", "Mystery"],
+          "position": 1,
+          "isPartOf": { "@type": "BookSeries", "name": "Big Bare Island" },
+          "sameAs": "https://www.amazon.com/dp/B0GF3XC3XB"
+        },
+        {
+          "@type": "Book",
+          "@id": "https://marcel-writes.com/#naked-nancy-book",
+          "name": "Naked Nancy: A Summer to Remember",
+          "url": "https://marcel-writes.com/#naked-nancy",
+          "image": "https://marcel-writes.com/assets/images/nancy1.jpg",
+          "author": { "@id": "https://marcel-writes.com/#author" },
+          "inLanguage": "en",
+          "genre": ["Fiction", "Naturist fiction", "Family fiction"],
+          "position": 1,
+          "isPartOf": { "@type": "BookSeries", "name": "Naked Nancy" },
+          "sameAs": "https://www.amazon.com/dp/B0GQR57DY7"
+        }
+      ]
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=13" />
+  <script src="js/main.js?v=3"></script>
 </head>
 
 <body>
@@ -26,6 +102,8 @@
     <h1>Marcel Lamothe</h1>
     <p class="tagline">I write stories about freedom</p>
   </header>
+
+  <main>
 
   <section class="section connect-section">
     <div class="connect-card">
@@ -35,6 +113,17 @@
       <!--p>If you’d like to hear about future books, please join my mailing list. No spam, no filler.</p-->
       <label class="visually-hidden" for="mailing-list-email">Email address</label>
       <div class="ml-embedded" data-form="mdQuFX"></div>
+      <noscript>
+        <form class="email-signup-fallback" action="https://assets.mailerlite.com/jsonp/1285228/forms/143968209498801914/subscribe" method="post" target="_blank">
+          <label for="mailing-list-email-fallback">Email address</label>
+          <div class="email-signup-fallback-controls">
+            <input id="mailing-list-email-fallback" name="fields[email]" type="email" autocomplete="email" required />
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+            <button type="submit">Keep me posted</button>
+          </div>
+        </form>
+      </noscript>
     </div>
   </section>
 
@@ -54,13 +143,14 @@
         <img src="assets/images/nancy1.jpg" alt="Jump to Naked Nancy" />
       </a>
     </nav>
+    <p class="store-disclosure">Purchase links open Amazon US. Links to other Amazon stores are available with each book.</p>
   </section>
 
   <section class="section" id="the-naked-truth">
     <div class="book-card">
       <div class="book-cover-container"><img src="assets/images/the-naked-truth.jpg" alt="'The Naked Truth' Book Cover" class="book-cover" /></div>
       <div class="book-info">
-        <h3><a target="_blank" href="https://www.amazon.com/Naked-Truth-Jane-Cullen-Book-ebook/dp/B0DPDY1RDD" class="book-title-link">The Naked Truth</a></h3>
+        <h3>The Naked Truth</h3>
         <p class="series-subtitle">Jane Cullen Book 1</p>
         <p>Jane Cullen’s journalism assignment was simple: Write a report about Paradise Cove. The catch? It’s a nudist
           resort. And somehow, that turns out to be the least surprising part of her story.</p>
@@ -72,7 +162,11 @@
           Truth is a wholesome, warm, and witty celebration of self-creation. Through Jane’s journey, we discover that
           maybe we’re all just one leap of faith away from becoming who we’re meant to be – even if that leap happens to
           be from a rooftop, wearing nothing but a smile and a safety harness.</p>
-        <a href="https://www.amazon.com/Naked-Truth-Jane-Cullen-Book-ebook/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+        <div class="book-actions">
+          <a href="https://www.amazon.com/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon US <span aria-hidden="true">→</span></a>
+          <a href="https://www.amazon.com/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer" class="sample-link">Read a sample on Amazon</a>
+          <details class="store-links"><summary>Other Amazon stores</summary><p><a href="https://www.amazon.ca/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer">Canada</a> · <a href="https://www.amazon.co.uk/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer">UK</a> · <a href="https://www.amazon.com.au/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer">Australia</a> · <a href="https://www.amazon.de/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer">Germany</a> · <a href="https://www.amazon.fr/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer">France</a></p></details>
+        </div>
       </div>
     </div>
   </section>
@@ -81,7 +175,7 @@
     <div class="book-card">
       <div class="book-cover-container"><img src="assets/images/the_oceans_daughter_cover.jpg" alt="’The Ocean’s Daughter’ Book Cover" class="book-cover" /></div>
       <div class="book-info">
-        <h3><a target="_blank" href="https://www.amazon.com/Oceans-Daughter-Jane-Cullen-Book-ebook/dp/B0FDGMB95W" class="book-title-link">The Ocean’s Daughter</a></h3>
+        <h3>The Ocean’s Daughter</h3>
         <p class="series-subtitle">Jane Cullen Book 2</p>
         <p>
           Jane thought she’d found her place in the world. Then she lost it.</p>
@@ -92,7 +186,11 @@
         <p>Enter Kat, a mysterious artist who answered an ad Jane forgot she posted, and who sees through every wall
           Jane has built. As Jane navigates a hostile world, corporate indifference, and her own spiraling self-doubt,
           she discovers that the hardest person to liberate might be herself.</p>
-        <a href="https://www.amazon.com/Oceans-Daughter-Jane-Cullen-Book-ebook/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+        <div class="book-actions">
+          <a href="https://www.amazon.com/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon US <span aria-hidden="true">→</span></a>
+          <a href="https://www.amazon.com/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer" class="sample-link">Read a sample on Amazon</a>
+          <details class="store-links"><summary>Other Amazon stores</summary><p><a href="https://www.amazon.ca/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer">Canada</a> · <a href="https://www.amazon.co.uk/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer">UK</a> · <a href="https://www.amazon.com.au/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer">Australia</a> · <a href="https://www.amazon.de/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer">Germany</a> · <a href="https://www.amazon.fr/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer">France</a></p></details>
+        </div>
       </div>
     </div>
   </section>
@@ -101,11 +199,15 @@
     <div class="book-card">
       <div class="book-cover-container"><img src="assets/images/Big-Bare-Island-eBook-Cover.jpg" alt="'Big Bare Island' Book Cover" class="book-cover" /></div>
       <div class="book-info">
-        <h3><a target="_blank" href="https://www.amazon.com/Big-Bare-Island-Marcel-Lamothe-ebook/dp/B0GF3XC3XB" class="book-title-link">Big Bare Island</a></h3>
+        <h3>Big Bare Island</h3>
         <p class="series-subtitle">Book 1</p>
         <p>A remote island in the middle of the Pacific. No clothes, no pretense, and no shortage of secrets.</p>
         <p>When Jess takes a job as the island’s new “problem solver”, she expects a quirky tropical gig with great coffee and unusual tan lines. What she doesn’t expect is to find herself drawn into mysteries that run far deeper than she expected...</p>
-        <a href="https://www.amazon.com/Big-Bare-Island-Marcel-Lamothe-ebook/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+        <div class="book-actions">
+          <a href="https://www.amazon.com/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon US <span aria-hidden="true">→</span></a>
+          <a href="https://www.amazon.com/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer" class="sample-link">Read a sample on Amazon</a>
+          <details class="store-links"><summary>Other Amazon stores</summary><p><a href="https://www.amazon.ca/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer">Canada</a> · <a href="https://www.amazon.co.uk/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer">UK</a> · <a href="https://www.amazon.com.au/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer">Australia</a> · <a href="https://www.amazon.de/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer">Germany</a> · <a href="https://www.amazon.fr/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer">France</a></p></details>
+        </div>
       </div>
     </div>
   </section>
@@ -114,12 +216,12 @@
     <div class="book-card">
       <div class="book-cover-container"><img src="assets/images/nancy1.jpg" alt="'Naked Nancy' Book Cover" class="book-cover" /></div>
       <div class="book-info">
-        <h3><a target="_blank" href="https://www.amazon.com/Naked-Nancy-Remember-Marcel-Lamothe-ebook/dp/B0GQR57DY7" class="book-title-link">Naked Nancy</a></h3>
+        <h3>Naked Nancy</h3>
         <p class="series-subtitle">Book 1: A Summer to Remember</p>
         <p>The Bellwood family didn’t set out to become naturists. But when ten-year-old Nancy discovers their neighbors’ clothing-optional lifestyle from her favorite tree, curiosity gets the better of all of them.</p>
         <p>What follows is a summer of unexpected adventures: shy mom Ellen rediscovering her carefree younger self, skeptical dad John learning to let go, and Nancy diving headfirst into a world where bodies are just bodies and freedom means leaving your swimsuit behind.</p>
-        <p class="translations">Also available in: <a href="https://www.amazon.com/Nackte-Nancy-unvergesslicher-Sommer-German-ebook/dp/B0GHS9M8CY" target="_blank">German</a>
-          &amp; <a href="https://www.amazon.com/Nancy-naturel-%C3%A9t%C3%A9-inoubliable-French-ebook/dp/B0GQTVJWYT" target="_blank">French</a>
+        <p class="translations">Also available in: <a href="https://www.amazon.de/dp/B0GHS9M8CY" target="_blank" rel="noopener noreferrer">German</a>
+          &amp; <a href="https://www.amazon.fr/dp/B0GQTVJWYT" target="_blank" rel="noopener noreferrer">French</a>
           <!--
            · <a href="https://www.amazon.com/Nancy-Desnudo-Verano-Inolvidable-Spanish-ebook/dp/B0GHS85Z87" target="_blank">Spanish</a>
            · <a href="https://www.amazon.com/Nancy-Nua-Ver%C3%A3o-Inesquec%C3%ADvel-Portuguese-ebook/dp/B0GQQZBP4Q" target="_blank">Portuguese</a>
@@ -128,7 +230,11 @@
            · <a href="https://www.amazon.com/Blote-Nancy-zomer-nooit-vergeten-ebook/dp/B0GSTH25W6" target="_blank">Dutch</a>
           -->
           </p>           
-        <a href="https://www.amazon.com/Naked-Nancy-Remember-Marcel-Lamothe-ebook/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+        <div class="book-actions">
+          <a href="https://www.amazon.com/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon US <span aria-hidden="true">→</span></a>
+          <a href="https://www.amazon.com/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer" class="sample-link">Read a sample on Amazon</a>
+          <details class="store-links"><summary>Other Amazon stores</summary><p><a href="https://www.amazon.ca/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer">Canada</a> · <a href="https://www.amazon.co.uk/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer">UK</a> · <a href="https://www.amazon.com.au/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer">Australia</a> · <a href="https://www.amazon.de/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer">Germany</a> · <a href="https://www.amazon.fr/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer">France</a></p></details>
+        </div>
       </div>
     </div>
   </section>
@@ -141,6 +247,7 @@
     </svg>
     <span>Follow me on Bluesky</span>
   </a>
+  </main>
 
   <footer>
     Copyright © 2025-2026 Marcel Lamothe · All rights reserved

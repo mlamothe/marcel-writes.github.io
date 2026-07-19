@@ -25,7 +25,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 2rem 2rem 2rem;
-  user-select: none;
 }
 
 p {
@@ -169,6 +168,43 @@ h1 {
   transform: translateY(-2px);
 }
 
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.sample-link {
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+.store-links {
+  flex-basis: 100%;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.store-links summary {
+  width: fit-content;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.store-links p {
+  margin: 0.35rem 0 0 !important;
+}
+
+.store-disclosure {
+  margin: 1rem 0 0;
+  color: #666;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 .translations {
   font-size: 0.875rem;
   color: #666;
@@ -216,8 +252,47 @@ footer {
 }
 
 .connect-card .ml-embedded {
-  max-width: 350px;
+  max-width: 430px;
   margin: 10px auto 0;
+}
+
+.email-signup-fallback {
+  max-width: 430px;
+  margin: 10px auto 0;
+  text-align: left;
+}
+
+.email-signup-fallback-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.35rem;
+  padding: 4px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.email-signup-fallback input[type="email"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 9.5px 16px;
+  border: 0;
+  background: transparent;
+  color: var(--primary-color);
+  font: inherit;
+}
+
+.email-signup-fallback button {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 21px;
+  background: var(--accent-color);
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -236,7 +311,7 @@ footer {
 #mlb2-21775010.ml-form-embedContainer,
 #mlb2-21775010.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
   display: block !important;
-  max-width: 350px !important;
+  max-width: 430px !important;
   width: 100% !important;
   background: transparent !important;
 }
@@ -293,9 +368,9 @@ footer {
 
 #mlb2-21775010.ml-form-embedContainer .ml-form-formContent.horozintalForm .ml-button-horizontal {
   display: block !important;
-  flex: 0 0 40px !important;
+  flex: 0 0 auto !important;
   float: none !important;
-  width: 40px !important;
+  width: auto !important;
 }
 
 .connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-button-horizontal button.primary,
@@ -303,14 +378,19 @@ footer {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 40px !important;
-  min-width: 40px !important;
+  width: auto !important;
+  min-width: max-content !important;
   height: 40px !important;
-  padding: 0 !important;
+  padding: 0 16px !important;
   border: 0 !important;
-  border-radius: 50% !important;
+  border-radius: 21px !important;
   background: var(--accent-color) !important;
   color: #FFFFFF !important;
+  font-family: Verdana, system-ui, Helvetica, sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
   cursor: pointer !important;
 }
 
@@ -385,5 +465,41 @@ footer {
 
   .book-cover {
     align-self: center;
+  }
+
+  #mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  #mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow .ml-input-horizontal {
+    width: 100% !important;
+    padding: 4px !important;
+    border-radius: 25px !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+  }
+
+  #mlb2-21775010.ml-form-embedContainer .ml-form-formContent.horozintalForm .ml-button-horizontal,
+  .connect-section .connect-card #mlb2-21775010.ml-form-embedContainer .ml-button-horizontal button.primary {
+    width: 100% !important;
+  }
+
+  .email-signup-fallback-controls {
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+  }
+
+  .email-signup-fallback input[type="email"],
+  .email-signup-fallback button {
+    width: 100%;
+  }
+
+  .email-signup-fallback input[type="email"] {
+    padding: 13px 16px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.05);
   }
 }

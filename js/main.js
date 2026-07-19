@@ -22,15 +22,9 @@
 ml("account", "1285228");
 
 // MailerLite renders the form asynchronously. This only applies the site's
-// accessible labels and icon; MailerLite owns submission and response handling.
+// accessible labels and button copy; MailerLite owns submission and responses.
 document.addEventListener("DOMContentLoaded", function () {
   const embed = document.querySelector('.ml-embedded[data-form="mdQuFX"]');
-  const envelopeIcon = `
-    <svg width="18" height="14" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M2 4L10 12L22 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M2 4H22V16C22 17.1046 21.1046 18 20 18H4C2.89543 18 2 17.1046 2 16V4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
-  `;
 
   function enhanceMailerLiteForm() {
     const emailInput = embed.querySelector('input[name="fields[email]"]');
@@ -45,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
     emailInput.autocomplete = "email";
 
     submitButtons.forEach(function (button) {
-      button.setAttribute("aria-label", "Join the mailing list");
-      button.innerHTML = envelopeIcon;
+      button.setAttribute("aria-label", "Keep me posted");
+      button.textContent = "Keep me posted";
     });
 
     return true;
