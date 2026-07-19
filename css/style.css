@@ -62,6 +62,26 @@ h1 {
   color: var(--primary-color);
 }
 
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.15rem;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.language-switcher a {
+  color: #666;
+  text-underline-offset: 0.15em;
+}
+
+.language-switcher [aria-current="page"] {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
 .book-card {
   display: flex;
   gap: 2rem;

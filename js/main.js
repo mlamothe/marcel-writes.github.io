@@ -25,6 +25,26 @@ ml("account", "1285228");
 // accessible labels and button copy; MailerLite owns submission and responses.
 document.addEventListener("DOMContentLoaded", function () {
   const embed = document.querySelector('.ml-embedded[data-form="mdQuFX"]');
+  const isGerman = document.documentElement.lang.toLowerCase().startsWith("de");
+  const copy = isGerman
+    ? {
+        emailLabel: "E-Mail-Adresse",
+        emailPlaceholder: "Deine E-Mail-Adresse",
+        submitLabel: "Sag mir Bescheid",
+        successTitle: "Vielen Dank!",
+        successMessage: "Du hast dich erfolgreich in meine Mailingliste eingetragen."
+      }
+    : {
+        emailLabel: "Email address",
+        emailPlaceholder: "Your email address",
+        submitLabel: "Keep me posted",
+        successTitle: "Thank you!",
+        successMessage: "You have successfully joined my subscriber list."
+      };
+
+  if (!embed) {
+    return;
+  }
 
   function enhanceMailerLiteForm() {
     const emailInput = embed.querySelector('input[name="fields[email]"]');
@@ -35,13 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     emailInput.id = "mailing-list-email";
-    emailInput.placeholder = "Your email address";
+    emailInput.placeholder = copy.emailPlaceholder;
     emailInput.autocomplete = "email";
+    emailInput.setAttribute("aria-label", copy.emailLabel);
 
     submitButtons.forEach(function (button) {
-      button.setAttribute("aria-label", "Keep me posted");
-      button.textContent = "Keep me posted";
+      button.setAttribute("aria-label", copy.submitLabel);
+      button.textContent = copy.submitLabel;
     });
+
+    const successTitle = embed.querySelector(".ml-form-successContent h4");
+    const successMessage = embed.querySelector(".ml-form-successContent p");
+
+    if (successTitle) {
+      successTitle.textContent = copy.successTitle;
+    }
+
+    if (successMessage) {
+      successMessage.textContent = copy.successMessage;
+    }
 
     return true;
   }
