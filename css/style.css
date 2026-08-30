@@ -39,8 +39,6 @@ header {
   margin: -1rem -2rem 0;
   padding: 1rem 2rem 0.5rem;
   background-color: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(8px);
 }
 
@@ -60,26 +58,6 @@ h1 {
   font-weight: 300;
   font-style: italic;
   color: var(--primary-color);
-}
-
-.language-switcher {
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.15rem;
-  color: #666;
-  font-size: 0.75rem;
-  line-height: 1.2;
-}
-
-.language-switcher a {
-  color: #666;
-  text-underline-offset: 0.15em;
-}
-
-.language-switcher [aria-current="page"] {
-  color: var(--primary-color);
-  font-weight: 600;
 }
 
 .book-card {
@@ -209,18 +187,6 @@ h1 {
 
 .store-links p {
   margin: 0.35rem 0 0 !important;
-}
-
-.store-disclosure {
-  margin: 1rem 0 0;
-  color: #666;
-  font-size: 0.875rem;
-  text-align: center;
-}
-
-.translations {
-  font-size: 0.875rem;
-  color: #666;
 }
 
 .series-subtitle {
