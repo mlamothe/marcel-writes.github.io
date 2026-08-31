@@ -18,7 +18,7 @@ html {
 
 body {
   font-family: Verdana, system-ui, Helvetica, sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--primary-color);
   background-color: #FFFFFF;
@@ -132,7 +132,8 @@ h1 {
 
   .book-cover-container {
     flex-basis: 40%;
-    max-width: 600px;
+    /* Keep covers close to paperback scale on very wide screens. */
+    max-width: 450px;
   }
 }
 
