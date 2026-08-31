@@ -409,26 +409,39 @@ footer {
   text-align: center !important;
 }
 
-.bluesky-follow {
+.social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  width: fit-content;
-  margin: 1.5rem auto 0;
   color: var(--accent-color);
   text-decoration: none;
 }
 
-.bluesky-logo {
+.bluesky-logo,
+.x-logo {
   width: 36px;
   height: 36px;
   color: var(--accent-color);
   transition: transform 0.2s ease;
 }
 
-.bluesky-follow:hover .bluesky-logo,
-.bluesky-follow:focus-visible .bluesky-logo {
+.x-logo {
+  color: #000000;
+}
+
+.social-link:hover .bluesky-logo,
+.social-link:focus-visible .bluesky-logo,
+.social-link:hover .x-logo,
+.social-link:focus-visible .x-logo {
   transform: scale(1.1);
 }
 
