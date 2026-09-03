@@ -216,6 +216,55 @@ a {
   margin-top: 1.5rem;
 }
 
+.friends-section {
+  max-width: 1000px;
+  margin: 1rem auto 0;
+}
+
+.friends-section h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.friend-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.friend-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.friend-link:hover,
+.friend-link:focus-visible {
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.friend-link-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.friend-link-url {
+  color: #666;
+  font-size: 0.85rem;
+}
+
 footer {
   text-align: center;
   padding: 1rem 0 0 0;
@@ -458,6 +507,10 @@ footer {
 
   .book-cover {
     align-self: center;
+  }
+
+  .friend-links {
+    grid-template-columns: 1fr;
   }
 
   #mlb2-21775010.ml-form-embedContainer .ml-form-horizontalRow {
