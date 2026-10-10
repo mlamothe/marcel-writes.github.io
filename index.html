@@ -15,12 +15,14 @@
   <meta property="og:description" content="Stories about freedom, self-discovery, and unconventional communities." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://marcel-writes.com/" />
-  <meta property="og:image" content="https://marcel-writes.com/assets/images/the-naked-truth.jpg" />
-  <meta property="og:image:alt" content="The Naked Truth book cover" />
+  <meta property="og:image" content="https://marcel-writes.com/assets/images/og-books.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Book covers: Naked Nancy, Big Bare Island, The Ocean’s Daughter, and The Naked Truth" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Marcel Lamothe" />
   <meta name="twitter:description" content="Stories about freedom, self-discovery, and unconventional communities." />
-  <meta name="twitter:image" content="https://marcel-writes.com/assets/images/the-naked-truth.jpg" />
+  <meta name="twitter:image" content="https://marcel-writes.com/assets/images/og-books.jpg" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -30,7 +32,8 @@
           "@id": "https://marcel-writes.com/#author",
           "name": "Marcel Lamothe",
           "url": "https://marcel-writes.com/",
-          "sameAs": ["https://bsky.app/profile/marcel-writes.com", "https://x.com/MarcelLamotheX"]
+          "image": "https://marcel-writes.com/assets/images/marcel.webp",
+          "sameAs": ["https://www.amazon.com/stores/author/B0DPLSHB5Z", "https://bsky.app/profile/marcel-writes.com", "https://x.com/MarcelLamotheX"]
         },
         {
           "@type": "WebSite",
@@ -95,8 +98,9 @@
       ]
     }
   </script>
-  <link rel="stylesheet" href="css/style.css?v=25" />
-  <script src="js/main.js?v=4"></script>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="css/style.css?v=26" />
+  <script src="js/main.js?v=5" defer></script>
 </head>
 
 <body>
@@ -107,126 +111,135 @@
 
   <main>
 
-  <section class="section connect-section">
-    <div class="connect-card">
-      <p><b>Coming next</b>: Naked Nancy Book 2</p>
-      <p>Nancy’s next adventure is underway. Join the list and I’ll tell you when it’s ready.</p>
-      <p>No spam, no filler.</p>
-      <!--p>If you’d like to hear about future books, please join my mailing list. No spam, no filler.</p-->
-      <label class="visually-hidden" for="mailing-list-email">Email address</label>
-      <div class="ml-embedded" data-form="mdQuFX"></div>
-      <noscript>
-        <form class="email-signup-fallback" action="https://assets.mailerlite.com/jsonp/1285228/forms/143968209498801914/subscribe" method="post" target="_blank">
-          <label for="mailing-list-email-fallback">Email address</label>
-          <div class="email-signup-fallback-controls">
-            <input id="mailing-list-email-fallback" name="fields[email]" type="email" autocomplete="email" required />
-            <input type="hidden" name="ml-submit" value="1" />
-            <input type="hidden" name="anticsrf" value="true" />
-            <button type="submit">Keep me posted</button>
+  <section class="section news-strip" aria-label="News">
+    <p><b>Coming next:</b> Naked Nancy Book 2</p>
+    <a href="https://www.amazon.com/stores/author/B0DPLSHB5Z" target="_blank" rel="noopener noreferrer" class="follow-button">Follow me on Amazon <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="section books" aria-labelledby="books-heading">
+    <h2 id="books-heading" class="section-heading">My Books</h2>
+    <div class="books-layout">
+      <nav class="book-picker" aria-label="Choose a book">
+        <a href="#naked-nancy" class="book-thumb">
+          <img src="assets/images/nancy1.webp" alt="Naked Nancy" width="400" height="637" />
+          <span class="book-thumb-label">Naked Nancy · Book 1</span>
+        </a>
+        <a href="#big-bare-island" class="book-thumb">
+          <img src="assets/images/Big-Bare-Island-eBook-Cover.webp" alt="Big Bare Island" width="400" height="640" />
+          <span class="book-thumb-label">Big Bare Island · Book 1</span>
+        </a>
+        <a href="#the-naked-truth" class="book-thumb">
+          <img src="assets/images/the-naked-truth.webp" alt="The Naked Truth" width="400" height="639" />
+          <span class="book-thumb-label">Jane Cullen · Book 1</span>
+        </a>
+        <a href="#the-oceans-daughter" class="book-thumb">
+          <img src="assets/images/the_oceans_daughter_cover.webp" alt="The Ocean’s Daughter" width="400" height="640" />
+          <span class="book-thumb-label">Jane Cullen · Book 2</span>
+        </a>
+      </nav>
+
+      <div class="book-details">
+        <div class="sheet-bar">
+          <span class="sheet-handle" aria-hidden="true"></span>
+          <button type="button" class="sheet-close" aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" /></svg>
+          </button>
+        </div>
+
+        <article class="book-detail" id="naked-nancy" aria-labelledby="naked-nancy-title">
+          <div class="book-detail-head">
+            <img src="assets/images/nancy1.webp" alt="" class="book-detail-cover" width="400" height="637" />
+            <div>
+              <h3 id="naked-nancy-title">Naked Nancy</h3>
+              <p class="series-subtitle">Book 1: A Summer to Remember</p>
+            </div>
           </div>
-        </form>
-      </noscript>
-      <p class="signup-privacy">You can unsubscribe at any time. See my <a href="privacy.html">privacy notice</a>.</p>
-    </div>
-  </section>
+          <p><strong>“Did two naked old people just invite me to come swimming?”</strong></p>
+          <p>From her new favorite perch in the backyard magnolia, ten-year-old Nancy Bellwood can see everything: the Fishers’ chickens, the
+            Harpers’ trampoline, and the neighbors swimming without a stitch on.</p>
+          <p>Walt and Diane are naturists. They wave. They have a pool. And before long, the Bellwoods are wondering why they ever bothered
+            with swimsuits.</p>
+          <p>Then Nancy discovers a naturist resort hidden in the North Carolina woods—and a torn treasure map left there forty years ago.
+            With three new friends at her side, she follows the clues beyond the resort fence, into an abandoned cotton mill, and toward a
+            secret nobody has found since the 80s.</p>
+          <p>She may be new to naturism, but if anyone can climb, crawl, and puzzle her way to the end, it’s <em>Naked Nancy!</em></p>
+          <p><strong>Now if only she could remember to get dressed before answering the door.</strong></p>
+          <div class="book-actions">
+            <a href="https://www.amazon.com/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
 
-  <section class="section book-navigation-section">
-    <h2>My Books</h2>
-    <nav class="book-navigation" aria-label="Jump to a book">
-      <a href="#naked-nancy" class="book-thumbnail">
-        <img src="assets/images/nancy1.webp" alt="Jump to Naked Nancy" />
-      </a>
-      <a href="#big-bare-island" class="book-thumbnail">
-        <img src="assets/images/Big-Bare-Island-eBook-Cover.webp" alt="Jump to Big Bare Island" />
-      </a>
-      <a href="#the-oceans-daughter" class="book-thumbnail">
-        <img src="assets/images/the_oceans_daughter_cover.webp" alt="Jump to The Ocean’s Daughter" />
-      </a>
-      <a href="#the-naked-truth" class="book-thumbnail">
-        <img src="assets/images/the-naked-truth.webp" alt="Jump to The Naked Truth" />
-      </a>
-    </nav>
-  </section>
+        <article class="book-detail" id="big-bare-island" aria-labelledby="big-bare-island-title">
+          <div class="book-detail-head">
+            <img src="assets/images/Big-Bare-Island-eBook-Cover.webp" alt="" class="book-detail-cover" width="400" height="640" />
+            <div>
+              <h3 id="big-bare-island-title">Big Bare Island</h3>
+              <p class="series-subtitle">Book 1</p>
+            </div>
+          </div>
+          <p><strong>Black lipstick. Combat boots. Nothing else.</strong></p>
+          <p>Jesse Marie has been fired three times for the same offense: refusing to help her bosses squeeze customers dry. So when a naturist kingdom in the middle of the Pacific offers this corporate goth a job, she takes it. The black wardrobe stays home. The combat boots are non-negotiable.</p>
+          <p>Her new boss is King Louis the Sun God, a retired Chicago homicide detective whose six island rules boil down to <em>get naked and don’t be a dick</em>. He’s hired Jess as his Chief Problem Solver, and it turns out paradise has plenty of problems. A few of them are even normal. Well, <i>almost</i> normal…</p>
+          <p>Goths and naturists have more in common than you’d think. Both know what it’s like to be the weirdo. And both know how to make room for one more.</p>
+          <p><strong><em>Big Bare Island</em> is the first book in a funny, strange, big-hearted naturist series from the author of <em>The Naked Truth</em>.</strong></p>
+          <div class="book-actions">
+            <a href="https://www.amazon.com/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
 
-  <section class="section" id="naked-nancy">
-    <div class="book-card">
-      <div class="book-cover-container"><img src="assets/images/nancy1.webp" alt="'Naked Nancy' Book Cover" class="book-cover" /></div>
-      <div class="book-info">
-        <h3>Naked Nancy</h3>
-        <p class="series-subtitle">Book 1: A Summer to Remember</p>
-        <p><strong>“Did two naked old people just invite me to come swimming?”</strong></p>
-        <p>From her new favorite perch in the backyard magnolia, ten-year-old Nancy Bellwood can see everything: the Fishers’ chickens, the
-          Harpers’ trampoline, and the neighbors swimming without a stitch on.</p>
-        <p>Walt and Diane are naturists. They wave. They have a pool. And before long, the Bellwoods are wondering why they ever bothered
-          with swimsuits.</p>
-        <p>Then Nancy discovers a naturist resort hidden in the North Carolina woods—and a torn treasure map left there forty years ago.
-          With three new friends at her side, she follows the clues beyond the resort fence, into an abandoned cotton mill, and toward a
-          secret nobody has found since the 80s.</p>
-        <p>She may be new to naturism, but if anyone can climb, crawl, and puzzle her way to the end, it’s <em>Naked Nancy!</em></p>
-        <p><strong>Now if only she could remember to get dressed before answering the door.</strong></p>
-        <div class="book-actions">
-          <a href="https://www.amazon.com/dp/B0GQR57DY7" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
-        </div>
+        <article class="book-detail" id="the-naked-truth" aria-labelledby="the-naked-truth-title">
+          <div class="book-detail-head">
+            <img src="assets/images/the-naked-truth.webp" alt="" class="book-detail-cover" width="400" height="639" />
+            <div>
+              <h3 id="the-naked-truth-title">The Naked Truth</h3>
+              <p class="series-subtitle">Jane Cullen Book 1</p>
+            </div>
+          </div>
+          <p><strong>“They say life begins at the edge of your comfort zone. Mine apparently began at the edge of Paradise Cove’s parking lot…”</strong></p>
+          <p>Jane Cullen’s high school journalism assignment was simple: Write a report about Paradise Cove. The catch? It’s a naturist
+            resort. And somehow, that turns out to be the least surprising part of her story.</p>
+          <p>Set on a whimsical tropical island where dress codes are nonexistent but life lessons are abundant, The Naked Truth is a
+            wholesome, warm, and witty celebration of self-creation. Through Jane’s journey, we discover that maybe we’re all just one
+            leap of faith away from becoming who we’re meant to be—even if that leap happens to be from a rooftop, wearing nothing
+            but a smile and a safety harness.</p>
+          <div class="book-actions">
+            <a href="https://www.amazon.com/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="book-detail" id="the-oceans-daughter" aria-labelledby="the-oceans-daughter-title">
+          <div class="book-detail-head">
+            <img src="assets/images/the_oceans_daughter_cover.webp" alt="" class="book-detail-cover" width="400" height="640" />
+            <div>
+              <h3 id="the-oceans-daughter-title">The Ocean’s Daughter</h3>
+              <p class="series-subtitle">Jane Cullen Book 2</p>
+            </div>
+          </div>
+          <p>Jane Cullen thought she’d found her place in the world. Then she lost it.</p>
+          <p>When a faceless investment firm buys Paradise Cove and converts it to a textile resort, Jane loses her job, her home, and the
+            community that taught her who she was. But an unexpected opportunity thrusts her into a new role leading an organization
+            dedicated to spreading naturism globally. It’s a lot of pressure. And thanks to an online smear campaign, half the internet
+            has opinions about her body and her choices.</p>
+          <p>Enter Kat, a barefoot artist who answered an ad Jane forgot she posted. One interview at a naked beach festival later, Kat
+            has the job—and Jane has her first girlfriend.</p>
+          <p><strong><em>“I enjoyed the first book in the series, but this one really blew me away. Engaging, personal, sensual, mystical, a little far-fetched perhaps but told with such joy and openness, it’s hard to put down.”</em></strong></p>
+          <div class="book-actions">
+            <a href="https://www.amazon.com/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
       </div>
     </div>
+    <div class="sheet-backdrop" hidden></div>
   </section>
 
-  <section class="section" id="big-bare-island">
-    <div class="book-card">
-      <div class="book-cover-container"><img src="assets/images/Big-Bare-Island-eBook-Cover.webp" alt="'Big Bare Island' Book Cover" class="book-cover" /></div>
-      <div class="book-info">
-        <h3>Big Bare Island</h3>
-        <p class="series-subtitle">Book 1</p>
-        <p><strong>Black lipstick. Combat boots. Nothing else.</strong></p>
-        <p>Jesse Marie has been fired three times for the same offense: refusing to help her bosses squeeze customers dry. So when a naturist kingdom in the middle of the Pacific offers this corporate goth a job, she takes it. The black wardrobe stays home. The combat boots are non-negotiable.</p>
-        <p>Her new boss is King Louis the Sun God, a retired Chicago homicide detective whose six island rules boil down to <em>get naked and don’t be a dick</em>. He’s hired Jess as his Chief Problem Solver, and it turns out paradise has plenty of problems. A few of them are even normal. Well, <i>almost</i> normal…</p>
-        <p>Goths and naturists have more in common than you’d think. Both know what it’s like to be the weirdo. And both know how to make room for one more.</p>
-        <p><strong><em>Big Bare Island</em> is the first book in a funny, strange, big-hearted naturist series from the author of <em>The Naked Truth</em>.</strong></p>
-        <div class="book-actions">
-          <a href="https://www.amazon.com/dp/B0GF3XC3XB" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="the-oceans-daughter">
-    <div class="book-card">
-      <div class="book-cover-container"><img src="assets/images/the_oceans_daughter_cover.webp" alt="’The Ocean’s Daughter’ Book Cover" class="book-cover" /></div>
-      <div class="book-info">
-        <h3>The Ocean’s Daughter</h3>
-        <p class="series-subtitle">Jane Cullen Book 2</p>
-        <p>Jane Cullen thought she’d found her place in the world. Then she lost it.</p>
-        <p>When a faceless investment firm buys Paradise Cove and converts it to a textile resort, Jane loses her job, her home, and the
-          community that taught her who she was. But an unexpected opportunity thrusts her into a new role leading an organization
-          dedicated to spreading naturism globally. It’s a lot of pressure. And thanks to an online smear campaign, half the internet
-          has opinions about her body and her choices.</p>
-        <p>Enter Kat, a barefoot artist who answered an ad Jane forgot she posted. One interview at a naked beach festival later, Kat
-          has the job—and Jane has her first girlfriend.</p>
-        <p><strong><em>“I enjoyed the first book in the series, but this one really blew me away. Engaging, personal, sensual, mystical, a little far-fetched perhaps but told with such joy and openness, it’s hard to put down.”</em></strong></p>
-        <div class="book-actions">
-          <a href="https://www.amazon.com/dp/B0FDGMB95W" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="the-naked-truth">
-    <div class="book-card">
-      <div class="book-cover-container"><img src="assets/images/the-naked-truth.webp" alt="'The Naked Truth' Book Cover" class="book-cover" /></div>
-      <div class="book-info">
-        <h3>The Naked Truth</h3>
-        <p class="series-subtitle">Jane Cullen Book 1</p>
-        <p><strong>“They say life begins at the edge of your comfort zone. Mine apparently began at the edge of Paradise Cove’s parking lot…”</strong></p>
-        <p>Jane Cullen’s high school journalism assignment was simple: Write a report about Paradise Cove. The catch? It’s a naturist
-          resort. And somehow, that turns out to be the least surprising part of her story.</p>
-        <p>Set on a whimsical tropical island where dress codes are nonexistent but life lessons are abundant, The Naked Truth is a
-          wholesome, warm, and witty celebration of self-creation. Through Jane’s journey, we discover that maybe we’re all just one
-          leap of faith away from becoming who we’re meant to be—even if that leap happens to be from a rooftop, wearing nothing
-          but a smile and a safety harness.</p>
-        <div class="book-actions">
-          <a href="https://www.amazon.com/dp/B0DPDY1RDD" target="_blank" rel="noopener noreferrer" class="amazon-button">View on Amazon <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
+  <section class="section about" id="about" aria-labelledby="about-heading">
+    <img src="assets/images/marcel.webp" alt="Marcel Lamothe on the beach" class="author-photo" width="320" height="320" loading="lazy" />
+    <div class="about-text">
+      <h2 id="about-heading">About Me</h2>
+      <p>I was raised by hippie parents who took me to nudist campgrounds as a kid, and growing up I never quite understood why the
+        human body was something to be ashamed of.</p>
+      <p>That free-spirited outlook stuck with me, though I now live in southern New Hampshire (which has terrible weather for
+        naturists). When I’m not writing, I like to hike, travel, or watch a good movie.</p>
     </div>
   </section>
 
